@@ -1,0 +1,3 @@
+WAITSCAN=0.1;
+CHN_Vin = 28;
+CHN_Vout= 25;
