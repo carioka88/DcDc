@@ -14,14 +14,20 @@ If you have administrative privileges, you have to go to AdminUser folder and ex
 You will have the possibiliy to access to the testing tool, or to access to the database tool
   Testing tool lets you:
     - Create a new converter model according to the voltage and other parameters important for the test,
+    
     - Do a pre-scan where you can define after it the thresolds to agree if a converter is good or not,
+    
     - Test different converters as if you were a test user, 
+    
     - Edit the parameters which you classify if one converter is good or not.
     
   Database tool lets you:
-    - Access to the differents converters stored in the database dcdc_tracking at CERN, 
-    selecting the model wich you are interested in.
-    - See the data of the converter selected, the different results obtained in the test, and what was expected.
+    - Access to the differents converters stored in the database dcdc_tracking at CERN,
+    selecting the model wich you are interested in,
+    
+    - See the data of the converter selected, the different results obtained in the test, and what was expected,
+    
     - Generate some graphics according to the converter efficiency and other parameters,
+    
     - Genetate a pdf with some graphics to print it.
     
