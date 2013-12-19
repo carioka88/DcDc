@@ -1,4 +1,4 @@
-function [V_mon I_mon V_out I_out] = plot_reg_vin_AMIS5MP( V_in, I_load, fname , handles)
+ function [V_mon I_mon V_out I_out] = plot_reg_vin_AMIS5MP( V_in, I_load, fname , handles)
 
     
     
@@ -13,7 +13,9 @@ function [V_mon I_mon V_out I_out] = plot_reg_vin_AMIS5MP( V_in, I_load, fname ,
 %     Eff = Pout./Pin;
     Eff = abs(Pout./Pin);
 
-    figure1 = figure;
+    scrsz = get(0,'ScreenSize');
+    %figure('Position',[scrsz(1) scrsz(2) scrsz(3)-1 scrsz(4)-2])
+    figure1 = figure('Position',[scrsz(1) scrsz(2) scrsz(3)-1 scrsz(4)-2]);
 
     subplot(2,2,1, 'Parent', figure1);
     lgd = cell(1,numel(V_in));
@@ -139,10 +141,12 @@ function [V_mon I_mon V_out I_out] = plot_reg_vin_AMIS5MP( V_in, I_load, fname ,
     % save the figure and the results
     
     %saveas(gcf, fname, 'fig');
+    cd('../Results');
     saveas(gcf, str2mat(fname{1}), 'fig');
     % save the mat file
     
     %save (fname);
     save(str2mat(fname{1}));
+    cd('../TestConverter');
     
 end
